@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "./static/css/main.92456c66.css",
+    "main.css": "./static/css/main.bd76be83.css",
     "main.js": "./static/js/main.632604fb.js",
     "static/media/workImgEight.jpg": "./static/media/workImgEight.863efcb32ba563410bd6.jpg",
     "static/media/Vorrawut Judasri Resume.pdf": "./static/media/Vorrawut Judasri Resume.3bf1f1aa19a86edd1681.pdf",
@@ -16,11 +16,11 @@
     "static/media/blogImgTwo.jpg": "./static/media/blogImgTwo.6aed37cec2695c32850c.jpg",
     "static/media/workImgOne.jpg": "./static/media/workImgOne.294921da5954189699c7.jpg",
     "index.html": "./index.html",
-    "main.92456c66.css.map": "./static/css/main.92456c66.css.map",
+    "main.bd76be83.css.map": "./static/css/main.bd76be83.css.map",
     "main.632604fb.js.map": "./static/js/main.632604fb.js.map"
   },
   "entrypoints": [
-    "static/css/main.92456c66.css",
+    "static/css/main.bd76be83.css",
     "static/js/main.632604fb.js"
   ]
 }
