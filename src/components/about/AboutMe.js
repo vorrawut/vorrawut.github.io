@@ -5,12 +5,11 @@ const AboutMe = () => {
     <div className='flex flex-col md:flex-row pb-6'>
       <div className='w-full md:w-1/2 text-zinc-400 px-6 border-r-[1px] border-r-zinc-800 flex items-center'>
         <div className='py-6'>
-          <h2 className='font-semibold mb-1'>Hello! I&apos;m Vorrawut Judasri</h2>
           <p className='text-base leading-6 mb-3'>
-            Hi! I&apos;m Vorrawut Judasri, a software engineer who loves problem-solving and working with teams. I enjoy learning new
-            technologies and continuously improving my skills.
+            A software engineer who loves problem-solving and working with teams. Enjoy learning new technologies and continuously improving
+            my skills.
           </p>
-          <p className='text-base leading-6 '>In my free time: I like watching Dota 2, reading manga, and listening to music. 💻 🎧</p>
+          <p className='text-base leading-6 '>Hobby: Watching game such as Dota 2, reading book or manga, and listening to music. 💻 🎧</p>
         </div>
       </div>
       <div className='w-full md:w-1/2 p-6'>
