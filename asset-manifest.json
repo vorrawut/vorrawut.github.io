@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "./static/css/main.4795455f.css",
-    "main.js": "./static/js/main.b14d8cd3.js",
+    "main.js": "./static/js/main.894d4532.js",
     "static/media/Noor_Mohammad_resume.pdf": "./static/media/Noor_Mohammad_resume.9b31b3dcf2d5307bd8f0.pdf",
     "static/media/bannerImg.png": "./static/media/bannerImg.e225c5dbdb7475319764.png",
     "static/media/workImgEight.jpg": "./static/media/workImgEight.863efcb32ba563410bd6.jpg",
@@ -17,10 +17,10 @@
     "static/media/workImgOne.jpg": "./static/media/workImgOne.294921da5954189699c7.jpg",
     "index.html": "./index.html",
     "main.4795455f.css.map": "./static/css/main.4795455f.css.map",
-    "main.b14d8cd3.js.map": "./static/js/main.b14d8cd3.js.map"
+    "main.894d4532.js.map": "./static/js/main.894d4532.js.map"
   },
   "entrypoints": [
     "static/css/main.4795455f.css",
-    "static/js/main.b14d8cd3.js"
+    "static/js/main.894d4532.js"
   ]
 }
