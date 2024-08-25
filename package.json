@@ -11,8 +11,7 @@
     "deploy": "gh-pages -d build",
     "lint": "eslint --fix . --ext .js",
     "prettier:write": "prettier --config .prettierrc --write .",
-    "prettier:check": "prettier --config .prettierrc --check .",
-    "prod": "npm run build & npm run deploy --"
+    "prettier:check": "prettier --config .prettierrc --check ."
   },
   "dependencies": {
     "@testing-library/jest-dom": "^6.5.0",
