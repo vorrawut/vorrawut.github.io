@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/vorrawutj/static/css/main.4795455f.css",
+    "main.js": "/vorrawutj/static/js/main.e575f140.js",
+    "static/media/Noor_Mohammad_resume.pdf": "/vorrawutj/static/media/Noor_Mohammad_resume.9b31b3dcf2d5307bd8f0.pdf",
+    "static/media/bannerImg.png": "/vorrawutj/static/media/bannerImg.e225c5dbdb7475319764.png",
+    "static/media/workImgEight.jpg": "/vorrawutj/static/media/workImgEight.863efcb32ba563410bd6.jpg",
+    "static/media/workImgSeven.jpg": "/vorrawutj/static/media/workImgSeven.b607849747fc53f9a1c1.jpg",
+    "static/media/workImgThree.jpg": "/vorrawutj/static/media/workImgThree.f617087bdf72ace764ea.jpg",
+    "static/media/workImgFive.jpg": "/vorrawutj/static/media/workImgFive.7e88cef06bfeb0835605.jpg",
+    "static/media/workImgTwo.jpg": "/vorrawutj/static/media/workImgTwo.7433873bf3c337c65ffc.jpg",
+    "static/media/workImgSix.jpg": "/vorrawutj/static/media/workImgSix.d899a4337fada00f42a3.jpg",
+    "static/media/workImgFour.jpg": "/vorrawutj/static/media/workImgFour.10ddd9b44b0d0802f131.jpg",
+    "static/media/blogImgOne.jpg": "/vorrawutj/static/media/blogImgOne.a49c0711b3657270c30d.jpg",
+    "static/media/blogImgThree.jpg": "/vorrawutj/static/media/blogImgThree.020cf6588ec70e316c6a.jpg",
+    "static/media/blogImgTwo.jpg": "/vorrawutj/static/media/blogImgTwo.6aed37cec2695c32850c.jpg",
+    "static/media/workImgOne.jpg": "/vorrawutj/static/media/workImgOne.294921da5954189699c7.jpg",
+    "index.html": "/vorrawutj/index.html",
+    "main.4795455f.css.map": "/vorrawutj/static/css/main.4795455f.css.map",
+    "main.e575f140.js.map": "/vorrawutj/static/js/main.e575f140.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4795455f.css",
+    "static/js/main.e575f140.js"
+  ]
+}
