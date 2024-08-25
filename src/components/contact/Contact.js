@@ -13,7 +13,7 @@ const Contact = () => {
   const [errEmail, setErrEmail] = useState(false)
   const [errMessages, setErrMessage] = useState(false)
   // ================= Error Messages End here ===================
-  const [seuccessMsg, setSuccessMsg] = useState('')
+  const [successMsg, setSuccessMsg] = useState('')
   // ================= Email Validation Start here ===============
   const EmailValidation = (email) => {
     return String(email)
@@ -71,13 +71,13 @@ const Contact = () => {
             <span className='bg-designColor text-gray-700 text-sm font-titleFont font-medium px-2 rounded-md flex items-center justify-center'>
               Address:
             </span>
-            Muscat, Oman
+            Bangkok, Thailand
           </p>
           <p className='flex justify-between w-full text-lg text-[#ccc] py-4 border-b-[1px] border-b-zinc-800'>
             <span className='bg-designColor text-gray-700 text-sm font-titleFont font-medium px-2 rounded-md flex items-center justify-center'>
               Phone:
             </span>
-            +968 97859628
+            +66 922683583
           </p>
         </div>
         <div className='w-full lgl:w-1/2'>
@@ -85,20 +85,20 @@ const Contact = () => {
             <span className='bg-designColor text-gray-700 text-sm font-titleFont font-medium px-2 rounded-md flex items-center justify-center'>
               Email:
             </span>
-            noor.jsdivs@gmail.com
+            vorrawutjud.work@gmail.com
           </p>
           <p className='flex justify-between w-full text-lg text-[#ccc] py-4 border-b-[1px] border-b-zinc-800'>
             <span className='bg-designColor text-gray-700 text-sm font-titleFont font-medium px-2 rounded-md flex items-center justify-center'>
               Freelance:
             </span>
-            Abailable
+            Available
           </p>
         </div>
       </div>
       <div className='w-full mt-10'>
         <Title title='Send' subTitle='Messages' />
-        {seuccessMsg ? (
-          <p className='text-center text-base font-titleFont p-20 text-designColor'>{seuccessMsg}</p>
+        {successMsg ? (
+          <p className='text-center text-base font-titleFont p-20 text-designColor'>{successMsg}</p>
         ) : (
           <form
             id='form'

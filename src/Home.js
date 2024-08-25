@@ -1,6 +1,6 @@
+/* eslint-disable no-use-before-define */
 import React, { useEffect, useRef, useState } from 'react'
 import { motion } from 'framer-motion'
-import { FaUser } from 'react-icons/fa'
 import Left from './components/home/Left'
 import About from './components/about/About'
 import Resume from './components/resume/Resume'
@@ -9,10 +9,15 @@ import Blog from './components/blog/Blog'
 import Contact from './components/contact/Contact'
 
 const Home = () => {
+  // eslint-disable-next-line no-unused-vars
   const [about, setAbout] = useState(true)
+  // eslint-disable-next-line no-unused-vars
   const [resume, setResume] = useState(false)
+  // eslint-disable-next-line no-unused-vars
   const [projects, setProjects] = useState(false)
+  // eslint-disable-next-line no-unused-vars
   const [blog, setBlog] = useState(false)
+  // eslint-disable-next-line no-unused-vars
   const [contact, setContact] = useState(false)
   // eslint-disable-next-line no-unused-vars
   const [sidenav, setSidenav] = useState(false)
@@ -67,121 +72,115 @@ const Home = () => {
 
         {/* ============= Sidenav End here =============== */}
         {/* ======= Other Icons Start */}
-        <div className='w-full h-80 bg-bodyColor rounded-3xl flex flex-col items-center justify-between py-6'>
-          {/* About Icon */}
-          <span
-            onClick={() => setAbout(true) & setResume(false) & setProjects(false) & setBlog(false) & setContact(false)}
-            className={`${
-              about
-                ? 'text-designColor'
-                : 'w-full h-6 text-textColor text-xl flex items-center justify-center hover:text-designColor duration-300 cursor-pointer relative group'
-            } w-full h-6 text-xl flex items-center justify-center hover:text-designColor duration-300 cursor-pointer relative group`}
-            // className='w-full h-6 text-textColor text-xl flex items-center justify-center hover:text-designColor duration-300 cursor-pointer relative group'
-          >
-            <FaUser />
-            <span className='text-black font-medium text-xs uppercase bg-designColor px-4 py-[1px] rounded-xl absolute left-0 translate-x-8 group-hover:translate-x-12 opacity-0 group-hover:opacity-100 transition-all duration-300 z-20'>
-              About
-            </span>
-          </span>
-          {/*          /!* Resume Icon *!/*/}
-          {/*          <span*/}
-          {/*              onClick={() =>*/}
-          {/*                  setAbout(false) &*/}
-          {/*                  setResume(true) &*/}
-          {/*                  setProjects(false) &*/}
-          {/*                  setBlog(false) &*/}
-          {/*                  setContact(false)*/}
-          {/*              }*/}
-          {/*              className={`${*/}
-          {/*                  resume*/}
-          {/*                      ? 'text-designColor'*/}
-          {/*                      : 'w-full h-6 text-textColor text-xl flex items-center justify-center hover:text-designColor duration-300 cursor-pointer relative group'*/}
-          {/*              } w-full h-6 text-xl flex items-center justify-center hover:text-designColor duration-300 cursor-pointer relative group`}*/}
-          {/*          >*/}
-          {/*  <IoIosPaper/>*/}
-          {/*  <span*/}
-          {/*      className='text-black font-medium text-xs uppercase bg-designColor px-4 py-[1px] rounded-xl absolute left-0 translate-x-8 group-hover:translate-x-12 opacity-0 group-hover:opacity-100 transition-all duration-300 z-20'>*/}
-          {/*    Resume*/}
-          {/*  </span>*/}
-          {/*</span>*/}
+        {/*<div className='w-full h-80 bg-bodyColor rounded-3xl flex flex-col items-center justify-between py-6'>*/}
+        {/* About Icon */}
+        {/*<span*/}
+        {/*  onClick={() => setAbout(true) & setResume(false) & setProjects(false) & setBlog(false) & setContact(false)}*/}
+        {/*  className={`${*/}
+        {/*    about*/}
+        {/*      ? 'text-designColor'*/}
+        {/*      : 'w-full h-6 text-textColor text-xl flex items-center justify-center hover:text-designColor duration-300 cursor-pointer relative group'*/}
+        {/*  } w-full h-6 text-xl flex items-center justify-center hover:text-designColor duration-300 cursor-pointer relative group`}*/}
+        {/*  // className='w-full h-6 text-textColor text-xl flex items-center justify-center hover:text-designColor duration-300 cursor-pointer relative group'*/}
+        {/*>*/}
+        {/*  <FaUser />*/}
+        {/*  <span className='text-black font-medium text-xs uppercase bg-designColor px-4 py-[1px] rounded-xl absolute left-0 translate-x-8 group-hover:translate-x-12 opacity-0 group-hover:opacity-100 transition-all duration-300 z-20'>*/}
+        {/*    About*/}
+        {/*  </span>*/}
+        {/*</span>*/}
+        {/*          /!* Resume Icon *!/*/}
+        {/*          <span*/}
+        {/*              onClick={() =>*/}
+        {/*                  setAbout(false) &*/}
+        {/*                  setResume(true) &*/}
+        {/*                  setProjects(false) &*/}
+        {/*                  setBlog(false) &*/}
+        {/*                  setContact(false)*/}
+        {/*              }*/}
+        {/*              className={`${*/}
+        {/*                  resume*/}
+        {/*                      ? 'text-designColor'*/}
+        {/*                      : 'w-full h-6 text-textColor text-xl flex items-center justify-center hover:text-designColor duration-300 cursor-pointer relative group'*/}
+        {/*              } w-full h-6 text-xl flex items-center justify-center hover:text-designColor duration-300 cursor-pointer relative group`}*/}
+        {/*          >*/}
+        {/*  <IoIosPaper/>*/}
+        {/*  <span*/}
+        {/*      className='text-black font-medium text-xs uppercase bg-designColor px-4 py-[1px] rounded-xl absolute left-0 translate-x-8 group-hover:translate-x-12 opacity-0 group-hover:opacity-100 transition-all duration-300 z-20'>*/}
+        {/*    Resume*/}
+        {/*  </span>*/}
+        {/*</span>*/}
 
-          {/*          /!* Project Icon *!/*/}
-          {/*          <span*/}
-          {/*              onClick={() =>*/}
-          {/*                  setAbout(false) &*/}
-          {/*                  setResume(false) &*/}
-          {/*                  setProjects(true) &*/}
-          {/*                  setBlog(false) &*/}
-          {/*                  setContact(false)*/}
-          {/*              }*/}
-          {/*              className={`${*/}
-          {/*                  projects*/}
-          {/*                      ? 'text-designColor'*/}
-          {/*                      : 'w-full h-6 text-textColor text-xl flex items-center justify-center hover:text-designColor duration-300 cursor-pointer relative group'*/}
-          {/*              } w-full h-6 text-xl flex items-center justify-center hover:text-designColor duration-300 cursor-pointer relative group`}*/}
-          {/*          >*/}
-          {/*  <MdWork/>*/}
-          {/*  <span*/}
-          {/*      className='text-black font-medium text-xs uppercase bg-designColor px-4 py-[1px] rounded-xl absolute left-0 translate-x-8 group-hover:translate-x-12 opacity-0 group-hover:opacity-100 transition-all duration-300 z-20'>*/}
-          {/*    Projects*/}
-          {/*  </span>*/}
-          {/*</span>*/}
+        {/*          /!* Project Icon *!/*/}
+        {/*          <span*/}
+        {/*              onClick={() =>*/}
+        {/*                  setAbout(false) &*/}
+        {/*                  setResume(false) &*/}
+        {/*                  setProjects(true) &*/}
+        {/*                  setBlog(false) &*/}
+        {/*                  setContact(false)*/}
+        {/*              }*/}
+        {/*              className={`${*/}
+        {/*                  projects*/}
+        {/*                      ? 'text-designColor'*/}
+        {/*                      : 'w-full h-6 text-textColor text-xl flex items-center justify-center hover:text-designColor duration-300 cursor-pointer relative group'*/}
+        {/*              } w-full h-6 text-xl flex items-center justify-center hover:text-designColor duration-300 cursor-pointer relative group`}*/}
+        {/*          >*/}
+        {/*  <MdWork/>*/}
+        {/*  <span*/}
+        {/*      className='text-black font-medium text-xs uppercase bg-designColor px-4 py-[1px] rounded-xl absolute left-0 translate-x-8 group-hover:translate-x-12 opacity-0 group-hover:opacity-100 transition-all duration-300 z-20'>*/}
+        {/*    Projects*/}
+        {/*  </span>*/}
+        {/*</span>*/}
 
-          {/*          /!* Blog Icon *!/*/}
-          {/*          <span*/}
-          {/*              onClick={() =>*/}
-          {/*                  setAbout(false) &*/}
-          {/*                  setResume(false) &*/}
-          {/*                  setProjects(false) &*/}
-          {/*                  setBlog(true) &*/}
-          {/*                  setContact(false)*/}
-          {/*              }*/}
-          {/*              className={`${*/}
-          {/*                  blog*/}
-          {/*                      ? 'text-designColor'*/}
-          {/*                      : 'w-full h-6 text-textColor text-xl flex items-center justify-center hover:text-designColor duration-300 cursor-pointer relative group'*/}
-          {/*              } w-full h-6 text-xl flex items-center justify-center hover:text-designColor duration-300 cursor-pointer relative group`}*/}
-          {/*          >*/}
-          {/*  <SiGooglechat/>*/}
-          {/*  <span*/}
-          {/*      className='text-black font-medium text-xs uppercase bg-designColor px-4 py-[1px] rounded-xl absolute left-0 translate-x-8 group-hover:translate-x-12 opacity-0 group-hover:opacity-100 transition-all duration-300 z-20'>*/}
-          {/*    Blog*/}
-          {/*  </span>*/}
-          {/*</span>*/}
+        {/*          /!* Blog Icon *!/*/}
+        {/*          <span*/}
+        {/*              onClick={() =>*/}
+        {/*                  setAbout(false) &*/}
+        {/*                  setResume(false) &*/}
+        {/*                  setProjects(false) &*/}
+        {/*                  setBlog(true) &*/}
+        {/*                  setContact(false)*/}
+        {/*              }*/}
+        {/*              className={`${*/}
+        {/*                  blog*/}
+        {/*                      ? 'text-designColor'*/}
+        {/*                      : 'w-full h-6 text-textColor text-xl flex items-center justify-center hover:text-designColor duration-300 cursor-pointer relative group'*/}
+        {/*              } w-full h-6 text-xl flex items-center justify-center hover:text-designColor duration-300 cursor-pointer relative group`}*/}
+        {/*          >*/}
+        {/*  <SiGooglechat/>*/}
+        {/*  <span*/}
+        {/*      className='text-black font-medium text-xs uppercase bg-designColor px-4 py-[1px] rounded-xl absolute left-0 translate-x-8 group-hover:translate-x-12 opacity-0 group-hover:opacity-100 transition-all duration-300 z-20'>*/}
+        {/*    Blog*/}
+        {/*  </span>*/}
+        {/*</span>*/}
 
-          {/*          /!* Contact Icon *!/*/}
-          {/*          <span*/}
-          {/*              onClick={() =>*/}
-          {/*                  setAbout(false) &*/}
-          {/*                  setResume(false) &*/}
-          {/*                  setProjects(false) &*/}
-          {/*                  setBlog(false) &*/}
-          {/*                  setContact(true)*/}
-          {/*              }*/}
-          {/*              className={`${*/}
-          {/*                  contact*/}
-          {/*                      ? 'text-designColor'*/}
-          {/*                      : 'w-full h-6 text-textColor text-xl flex items-center justify-center hover:text-designColor duration-300 cursor-pointer relative group'*/}
-          {/*              } w-full h-6 text-xl flex items-center justify-center hover:text-designColor duration-300 cursor-pointer relative group`}*/}
-          {/*          >*/}
-          {/*  <FaEnvelope/>*/}
-          {/*  <span*/}
-          {/*      className='text-black font-medium text-xs uppercase bg-designColor px-4 py-[1px] rounded-xl absolute left-0 translate-x-8 group-hover:translate-x-12 opacity-0 group-hover:opacity-100 transition-all duration-300 z-20'>*/}
-          {/*    Contact*/}
-          {/*  </span>*/}
-          {/*</span>*/}
+        {/* Contact Icon */}
+        {/*<span*/}
+        {/*  onClick={() => setAbout(false) & setResume(false) & setProjects(false) & setBlog(false) & setContact(true)}*/}
+        {/*  className={`${*/}
+        {/*    contact*/}
+        {/*      ? 'text-designColor'*/}
+        {/*      : 'w-full h-6 text-textColor text-xl flex items-center justify-center hover:text-designColor duration-300 cursor-pointer relative group'*/}
+        {/*  } w-full h-6 text-xl flex items-center justify-center hover:text-designColor duration-300 cursor-pointer relative group`}*/}
+        {/*>*/}
+        {/*  <FaEnvelope />*/}
+        {/*  <span className='text-black font-medium text-xs uppercase bg-designColor px-4 py-[1px] rounded-xl absolute left-0 translate-x-8 group-hover:translate-x-12 opacity-0 group-hover:opacity-100 transition-all duration-300 z-20'>*/}
+        {/*    Contact*/}
+        {/*  </span>*/}
+        {/*</span>*/}
 
-          {/*          <span*/}
-          {/*              className='w-full h-6 text-textColor text-xl flex items-center justify-center hover:text-designColor duration-300 cursor-pointer relative group'>*/}
-          {/*  <BsTelephonePlusFill/>*/}
-          {/*  <span*/}
-          {/*      className='text-black font-medium text-xs uppercase bg-designColor px-4 py-[1px] rounded-xl absolute left-0 translate-x-8 group-hover:translate-x-12 opacity-0 group-hover:opacity-100 transition-all duration-300 z-20'>*/}
-          {/*    Call*/}
-          {/*  </span>*/}
-          {/*</span>*/}
-        </div>
+        {/*          <span*/}
+        {/*              className='w-full h-6 text-textColor text-xl flex items-center justify-center hover:text-designColor duration-300 cursor-pointer relative group'>*/}
+        {/*  <BsTelephonePlusFill/>*/}
+        {/*  <span*/}
+        {/*      className='text-black font-medium text-xs uppercase bg-designColor px-4 py-[1px] rounded-xl absolute left-0 translate-x-8 group-hover:translate-x-12 opacity-0 group-hover:opacity-100 transition-all duration-300 z-20'>*/}
+        {/*    Call*/}
+        {/*  </span>*/}
+        {/*</span>*/}
+        {/*</div>*/}
         {/* ======= Other Icons End */}
       </div>
+
       {/* ================= Left Icons Start here ====================== */}
       <div className='w-full lgl:w-[94%] h-full flex flex-col gap-6 lgl:gap-0 lgl:flex-row items-center'>
         {/* ======================== Home Left Start here ============================ */}
