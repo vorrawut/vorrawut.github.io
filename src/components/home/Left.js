@@ -36,19 +36,25 @@ const Left = () => {
             </a>
 
             {/* ======= Medium */}
-            <span className='hover:text-designColor duration-300 cursor-pointer text-xl'>
-              <FaMedium />
-            </span>
+            <a href='https://medium.com/@vortj'>
+              <span className='hover:text-designColor duration-300 cursor-pointer text-xl'>
+                <FaMedium />
+              </span>
+            </a>
 
             {/* ======= Linkedin */}
-            <span className='hover:text-designColor duration-300 cursor-pointer text-xl'>
-              <FaLinkedin />
-            </span>
+            <a href='https://www.linkedin.com/in/vorrawutj'>
+              <span className='hover:text-designColor duration-300 cursor-pointer text-xl'>
+                <FaLinkedin />
+              </span>
+            </a>
 
             {/* ======= Twitter */}
-            <span className='hover:text-designColor duration-300 cursor-pointer text-xl'>
-              <AiFillTwitterCircle />
-            </span>
+            <a href=''>
+              <span className='hover:text-designColor duration-300 cursor-pointer text-xl'>
+                <AiFillTwitterCircle />
+              </span>
+            </a>
           </div>
         </div>
         <div className='flex h-14'>
