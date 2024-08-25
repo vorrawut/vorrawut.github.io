@@ -3,10 +3,10 @@ import React, { useEffect, useRef, useState } from 'react'
 import { motion } from 'framer-motion'
 import Left from './components/home/Left'
 import About from './components/about/About'
-import Resume from './components/resume/Resume'
-import Projects from './components/projects/Projects'
-import Blog from './components/blog/Blog'
-import Contact from './components/contact/Contact'
+// import Resume from './components/resume/Resume'
+// import Projects from './components/projects/Projects'
+// import Blog from './components/blog/Blog'
+// import Contact from './components/contact/Contact'
 
 const Home = () => {
   // eslint-disable-next-line no-unused-vars
@@ -190,11 +190,12 @@ const Home = () => {
           {/* ======================== Smaller device content Start ======================== */}
           <div className='w-full h-full lgl:hidden bg-transparent rounded-2xl flex flex-col gap-6'>
             <About />
-            <Resume />
-            <Projects />
-            <Blog />
-            <Contact />
+            {/*  <Resume />*/}
+            {/*  <Projects />*/}
+            {/*  <Blog />*/}
+            {/*  <Contact />*/}
           </div>
+
           {/* ======================== Smaller device content End ========================== */}
           <div className='w-full h-[96%] hidden lgl:flex justify-center overflow-y-scroll scrollbar-thin scrollbar-thumb-[#646464]'>
             {about && (
@@ -203,26 +204,26 @@ const Home = () => {
               </motion.div>
             )}
 
-            {resume && (
-              <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
-                <Resume />
-              </motion.div>
-            )}
-            {projects && (
-              <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
-                <Projects />
-              </motion.div>
-            )}
-            {blog && (
-              <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
-                <Blog />
-              </motion.div>
-            )}
-            {contact && (
-              <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
-                <Contact />
-              </motion.div>
-            )}
+            {/*  {resume && (*/}
+            {/*    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>*/}
+            {/*      <Resume />*/}
+            {/*    </motion.div>*/}
+            {/*  )}*/}
+            {/*  {projects && (*/}
+            {/*    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>*/}
+            {/*      <Projects />*/}
+            {/*    </motion.div>*/}
+            {/*  )}*/}
+            {/*  {blog && (*/}
+            {/*    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>*/}
+            {/*      <Blog />*/}
+            {/*    </motion.div>*/}
+            {/*  )}*/}
+            {/*  {contact && (*/}
+            {/*    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>*/}
+            {/*      <Contact />*/}
+            {/*    </motion.div>*/}
+            {/*  )}*/}
           </div>
         </div>
       </div>
