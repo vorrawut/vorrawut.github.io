@@ -3,16 +3,26 @@ import React, { useEffect, useRef, useState } from 'react'
 import { motion } from 'framer-motion'
 import Left from './components/home/Left'
 import About from './components/about/About'
-// import Resume from './components/resume/Resume'
+import { IoIosPaper } from 'react-icons/io'
+// import { BsTelephonePlusFill } from 'react-icons/bs'
+// import { FaEnvelope, FaUser } from 'react-icons/fa'
+// import { SiGooglechat } from 'react-icons/si'
+// import { MdWork } from 'react-icons/md'
+import Education from './components/resume/education/Education'
 // import Projects from './components/projects/Projects'
 // import Blog from './components/blog/Blog'
 // import Contact from './components/contact/Contact'
+import Work from './components/resume/work/Work'
+import { BiCodeAlt } from 'react-icons/bi'
+import { FaUser } from 'react-icons/fa'
 
 const Home = () => {
   // eslint-disable-next-line no-unused-vars
   const [about, setAbout] = useState(true)
   // eslint-disable-next-line no-unused-vars
-  const [resume, setResume] = useState(false)
+  const [education, setEducation] = useState(false)
+  // eslint-disable-next-line no-unused-vars
+  const [workExperience, setWorkExperience] = useState(false)
   // eslint-disable-next-line no-unused-vars
   const [projects, setProjects] = useState(false)
   // eslint-disable-next-line no-unused-vars
@@ -72,112 +82,115 @@ const Home = () => {
 
         {/* ============= Sidenav End here =============== */}
         {/* ======= Other Icons Start */}
-        {/*<div className='w-full h-80 bg-bodyColor rounded-3xl flex flex-col items-center justify-between py-6'>*/}
-        {/* About Icon */}
-        {/*<span*/}
-        {/*  onClick={() => setAbout(true) & setResume(false) & setProjects(false) & setBlog(false) & setContact(false)}*/}
-        {/*  className={`${*/}
-        {/*    about*/}
-        {/*      ? 'text-designColor'*/}
-        {/*      : 'w-full h-6 text-textColor text-xl flex items-center justify-center hover:text-designColor duration-300 cursor-pointer relative group'*/}
-        {/*  } w-full h-6 text-xl flex items-center justify-center hover:text-designColor duration-300 cursor-pointer relative group`}*/}
-        {/*  // className='w-full h-6 text-textColor text-xl flex items-center justify-center hover:text-designColor duration-300 cursor-pointer relative group'*/}
-        {/*>*/}
-        {/*  <FaUser />*/}
-        {/*  <span className='text-black font-medium text-xs uppercase bg-designColor px-4 py-[1px] rounded-xl absolute left-0 translate-x-8 group-hover:translate-x-12 opacity-0 group-hover:opacity-100 transition-all duration-300 z-20'>*/}
-        {/*    About*/}
-        {/*  </span>*/}
-        {/*</span>*/}
-        {/*          /!* Resume Icon *!/*/}
-        {/*          <span*/}
-        {/*              onClick={() =>*/}
-        {/*                  setAbout(false) &*/}
-        {/*                  setResume(true) &*/}
-        {/*                  setProjects(false) &*/}
-        {/*                  setBlog(false) &*/}
-        {/*                  setContact(false)*/}
-        {/*              }*/}
-        {/*              className={`${*/}
-        {/*                  resume*/}
-        {/*                      ? 'text-designColor'*/}
-        {/*                      : 'w-full h-6 text-textColor text-xl flex items-center justify-center hover:text-designColor duration-300 cursor-pointer relative group'*/}
-        {/*              } w-full h-6 text-xl flex items-center justify-center hover:text-designColor duration-300 cursor-pointer relative group`}*/}
-        {/*          >*/}
-        {/*  <IoIosPaper/>*/}
-        {/*  <span*/}
-        {/*      className='text-black font-medium text-xs uppercase bg-designColor px-4 py-[1px] rounded-xl absolute left-0 translate-x-8 group-hover:translate-x-12 opacity-0 group-hover:opacity-100 transition-all duration-300 z-20'>*/}
-        {/*    Resume*/}
-        {/*  </span>*/}
-        {/*</span>*/}
+        <div className='w-full h-80 bg-bodyColor rounded-3xl flex flex-col items-center justify-between py-6'>
+          {/*About Icon*/}
+          <span
+            onClick={() =>
+              setAbout(true) & setEducation(false) & setWorkExperience(false) & setProjects(false) & setBlog(false) & setContact(false)
+            }
+            className={`${
+              about
+                ? 'text-designColor'
+                : 'w-full h-6 text-textColor text-xl flex items-center justify-center hover:text-designColor duration-300 cursor-pointer relative group'
+            } w-full h-6 text-xl flex items-center justify-center hover:text-designColor duration-300 cursor-pointer relative group`}
+            // className='w-full h-6 text-textColor text-xl flex items-center justify-center hover:text-designColor duration-300 cursor-pointer relative group'
+          >
+            <FaUser />
+            <span className='text-black font-medium text-xs uppercase bg-designColor px-4 py-[1px] rounded-xl absolute left-0 translate-x-8 group-hover:translate-x-12 opacity-0 group-hover:opacity-100 transition-all duration-300 z-20'>
+              About
+            </span>
+          </span>
+          {/* Education Icon */}
+          <span
+            onClick={() =>
+              setAbout(false) & setEducation(true) & setWorkExperience(false) & setProjects(false) & setBlog(false) & setContact(false)
+            }
+            className={`${
+              education
+                ? 'text-designColor'
+                : 'w-full h-6 text-textColor text-xl flex items-center justify-center hover:text-designColor duration-300 cursor-pointer relative group'
+            } w-full h-6 text-xl flex items-center justify-center hover:text-designColor duration-300 cursor-pointer relative group`}
+          >
+            <IoIosPaper />
+            <span className='text-black font-medium text-xs uppercase bg-designColor px-4 py-[1px] rounded-xl absolute left-0 translate-x-8 group-hover:translate-x-12 opacity-0 group-hover:opacity-100 transition-all duration-300 z-20'>
+              Education
+            </span>
+          </span>
 
-        {/*          /!* Project Icon *!/*/}
-        {/*          <span*/}
-        {/*              onClick={() =>*/}
-        {/*                  setAbout(false) &*/}
-        {/*                  setResume(false) &*/}
-        {/*                  setProjects(true) &*/}
-        {/*                  setBlog(false) &*/}
-        {/*                  setContact(false)*/}
-        {/*              }*/}
-        {/*              className={`${*/}
-        {/*                  projects*/}
-        {/*                      ? 'text-designColor'*/}
-        {/*                      : 'w-full h-6 text-textColor text-xl flex items-center justify-center hover:text-designColor duration-300 cursor-pointer relative group'*/}
-        {/*              } w-full h-6 text-xl flex items-center justify-center hover:text-designColor duration-300 cursor-pointer relative group`}*/}
-        {/*          >*/}
-        {/*  <MdWork/>*/}
-        {/*  <span*/}
-        {/*      className='text-black font-medium text-xs uppercase bg-designColor px-4 py-[1px] rounded-xl absolute left-0 translate-x-8 group-hover:translate-x-12 opacity-0 group-hover:opacity-100 transition-all duration-300 z-20'>*/}
-        {/*    Projects*/}
-        {/*  </span>*/}
-        {/*</span>*/}
+          {/* Work Icon */}
+          <span
+            onClick={() =>
+              setAbout(false) & setEducation(false) & setWorkExperience(true) & setProjects(false) & setBlog(false) & setContact(false)
+            }
+            className={`${
+              workExperience
+                ? 'text-designColor'
+                : 'w-full h-6 text-textColor text-xl flex items-center justify-center hover:text-designColor duration-300 cursor-pointer relative group'
+            } w-full h-6 text-xl flex items-center justify-center hover:text-designColor duration-300 cursor-pointer relative group`}
+          >
+            <BiCodeAlt />
+            <span className='text-black font-medium text-xs uppercase bg-designColor px-4 py-[1px] rounded-xl absolute left-0 translate-x-8 group-hover:translate-x-12 opacity-0 group-hover:opacity-100 transition-all duration-300 z-20'>
+              Work Experience
+            </span>
+          </span>
 
-        {/*          /!* Blog Icon *!/*/}
-        {/*          <span*/}
-        {/*              onClick={() =>*/}
-        {/*                  setAbout(false) &*/}
-        {/*                  setResume(false) &*/}
-        {/*                  setProjects(false) &*/}
-        {/*                  setBlog(true) &*/}
-        {/*                  setContact(false)*/}
-        {/*              }*/}
-        {/*              className={`${*/}
-        {/*                  blog*/}
-        {/*                      ? 'text-designColor'*/}
-        {/*                      : 'w-full h-6 text-textColor text-xl flex items-center justify-center hover:text-designColor duration-300 cursor-pointer relative group'*/}
-        {/*              } w-full h-6 text-xl flex items-center justify-center hover:text-designColor duration-300 cursor-pointer relative group`}*/}
-        {/*          >*/}
-        {/*  <SiGooglechat/>*/}
-        {/*  <span*/}
-        {/*      className='text-black font-medium text-xs uppercase bg-designColor px-4 py-[1px] rounded-xl absolute left-0 translate-x-8 group-hover:translate-x-12 opacity-0 group-hover:opacity-100 transition-all duration-300 z-20'>*/}
-        {/*    Blog*/}
-        {/*  </span>*/}
-        {/*</span>*/}
+          {/*/!* Project Icon *!/*/}
+          {/*<span*/}
+          {/*  onClick={() =>*/}
+          {/*    setAbout(false) & setEducation(false) & setWorkExperience(false) & setProjects(true) & setBlog(false) & setContact(false)*/}
+          {/*  }*/}
+          {/*  className={`${*/}
+          {/*    projects*/}
+          {/*      ? 'text-designColor'*/}
+          {/*      : 'w-full h-6 text-textColor text-xl flex items-center justify-center hover:text-designColor duration-300 cursor-pointer relative group'*/}
+          {/*  } w-full h-6 text-xl flex items-center justify-center hover:text-designColor duration-300 cursor-pointer relative group`}*/}
+          {/*>*/}
+          {/*  <MdWork />*/}
+          {/*  <span className='text-black font-medium text-xs uppercase bg-designColor px-4 py-[1px] rounded-xl absolute left-0 translate-x-8 group-hover:translate-x-12 opacity-0 group-hover:opacity-100 transition-all duration-300 z-20'>*/}
+          {/*    Projects*/}
+          {/*  </span>*/}
+          {/*</span>*/}
 
-        {/* Contact Icon */}
-        {/*<span*/}
-        {/*  onClick={() => setAbout(false) & setResume(false) & setProjects(false) & setBlog(false) & setContact(true)}*/}
-        {/*  className={`${*/}
-        {/*    contact*/}
-        {/*      ? 'text-designColor'*/}
-        {/*      : 'w-full h-6 text-textColor text-xl flex items-center justify-center hover:text-designColor duration-300 cursor-pointer relative group'*/}
-        {/*  } w-full h-6 text-xl flex items-center justify-center hover:text-designColor duration-300 cursor-pointer relative group`}*/}
-        {/*>*/}
-        {/*  <FaEnvelope />*/}
-        {/*  <span className='text-black font-medium text-xs uppercase bg-designColor px-4 py-[1px] rounded-xl absolute left-0 translate-x-8 group-hover:translate-x-12 opacity-0 group-hover:opacity-100 transition-all duration-300 z-20'>*/}
-        {/*    Contact*/}
-        {/*  </span>*/}
-        {/*</span>*/}
+          {/*/!* Blog Icon *!/*/}
+          {/*<span*/}
+          {/*  onClick={() =>*/}
+          {/*    setAbout(false) & setEducation(false) & setWorkExperience(false) & setProjects(false) & setBlog(true) & setContact(false)*/}
+          {/*  }*/}
+          {/*  className={`${*/}
+          {/*    blog*/}
+          {/*      ? 'text-designColor'*/}
+          {/*      : 'w-full h-6 text-textColor text-xl flex items-center justify-center hover:text-designColor duration-300 cursor-pointer relative group'*/}
+          {/*  } w-full h-6 text-xl flex items-center justify-center hover:text-designColor duration-300 cursor-pointer relative group`}*/}
+          {/*>*/}
+          {/*  <SiGooglechat />*/}
+          {/*  <span className='text-black font-medium text-xs uppercase bg-designColor px-4 py-[1px] rounded-xl absolute left-0 translate-x-8 group-hover:translate-x-12 opacity-0 group-hover:opacity-100 transition-all duration-300 z-20'>*/}
+          {/*    Blog*/}
+          {/*  </span>*/}
+          {/*</span>*/}
 
-        {/*          <span*/}
-        {/*              className='w-full h-6 text-textColor text-xl flex items-center justify-center hover:text-designColor duration-300 cursor-pointer relative group'>*/}
-        {/*  <BsTelephonePlusFill/>*/}
-        {/*  <span*/}
-        {/*      className='text-black font-medium text-xs uppercase bg-designColor px-4 py-[1px] rounded-xl absolute left-0 translate-x-8 group-hover:translate-x-12 opacity-0 group-hover:opacity-100 transition-all duration-300 z-20'>*/}
-        {/*    Call*/}
-        {/*  </span>*/}
-        {/*</span>*/}
-        {/*</div>*/}
+          {/*/!*Contact Icon*!/*/}
+          {/*<span*/}
+          {/*  onClick={() =>*/}
+          {/*    setAbout(false) & setEducation(false) & setWorkExperience(false) & setProjects(false) & setBlog(false) & setContact(true)*/}
+          {/*  }*/}
+          {/*  className={`${*/}
+          {/*    contact*/}
+          {/*      ? 'text-designColor'*/}
+          {/*      : 'w-full h-6 text-textColor text-xl flex items-center justify-center hover:text-designColor duration-300 cursor-pointer relative group'*/}
+          {/*  } w-full h-6 text-xl flex items-center justify-center hover:text-designColor duration-300 cursor-pointer relative group`}*/}
+          {/*>*/}
+          {/*  <FaEnvelope />*/}
+          {/*  <span className='text-black font-medium text-xs uppercase bg-designColor px-4 py-[1px] rounded-xl absolute left-0 translate-x-8 group-hover:translate-x-12 opacity-0 group-hover:opacity-100 transition-all duration-300 z-20'>*/}
+          {/*    Contact*/}
+          {/*  </span>*/}
+          {/*</span>*/}
+          {/*<span className='w-full h-6 text-textColor text-xl flex items-center justify-center hover:text-designColor duration-300 cursor-pointer relative group'>*/}
+          {/*  <BsTelephonePlusFill />*/}
+          {/*  <span className='text-black font-medium text-xs uppercase bg-designColor px-4 py-[1px] rounded-xl absolute left-0 translate-x-8 group-hover:translate-x-12 opacity-0 group-hover:opacity-100 transition-all duration-300 z-20'>*/}
+          {/*    Call*/}
+          {/*  </span>*/}
+          {/*</span>*/}
+        </div>
         {/* ======= Other Icons End */}
       </div>
 
@@ -190,10 +203,11 @@ const Home = () => {
           {/* ======================== Smaller device content Start ======================== */}
           <div className='w-full h-full lgl:hidden bg-transparent rounded-2xl flex flex-col gap-6'>
             <About />
-            {/*  <Resume />*/}
-            {/*  <Projects />*/}
-            {/*  <Blog />*/}
-            {/*  <Contact />*/}
+            <Education />
+            <Work />
+            {/*<Projects />*/}
+            {/*<Blog />*/}
+            {/*<Contact />*/}
           </div>
 
           {/* ======================== Smaller device content End ========================== */}
@@ -203,27 +217,31 @@ const Home = () => {
                 <About />
               </motion.div>
             )}
-
-            {/*  {resume && (*/}
-            {/*    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>*/}
-            {/*      <Resume />*/}
-            {/*    </motion.div>*/}
-            {/*  )}*/}
-            {/*  {projects && (*/}
-            {/*    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>*/}
-            {/*      <Projects />*/}
-            {/*    </motion.div>*/}
-            {/*  )}*/}
-            {/*  {blog && (*/}
-            {/*    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>*/}
-            {/*      <Blog />*/}
-            {/*    </motion.div>*/}
-            {/*  )}*/}
-            {/*  {contact && (*/}
-            {/*    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>*/}
-            {/*      <Contact />*/}
-            {/*    </motion.div>*/}
-            {/*  )}*/}
+            {education && (
+              <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
+                <Education />
+              </motion.div>
+            )}
+            {workExperience && (
+              <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
+                <Work />
+              </motion.div>
+            )}
+            {/*{projects && (*/}
+            {/*  <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>*/}
+            {/*    <Projects />*/}
+            {/*  </motion.div>*/}
+            {/*)}*/}
+            {/*{blog && (*/}
+            {/*  <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>*/}
+            {/*    <Blog />*/}
+            {/*  </motion.div>*/}
+            {/*)}*/}
+            {/*{contact && (*/}
+            {/*  <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>*/}
+            {/*    <Contact />*/}
+            {/*  </motion.div>*/}
+            {/*)}*/}
           </div>
         </div>
       </div>
