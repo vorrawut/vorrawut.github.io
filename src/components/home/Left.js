@@ -7,6 +7,10 @@ import { AiFillTwitterCircle } from 'react-icons/ai'
 import CV from '../../assets/Vorrawut Judasri Resume.pdf'
 import { bannerImage } from '../../assets/index'
 
+const onContactButtonDidTap = () => {
+  document.getElementById('SpanContact').click()
+}
+
 const Left = () => {
   const [text] = useTypewriter({
     words: ['Agile Engineer', 'Full Stack Developer', 'Mobile Developer', 'Proactive-Introvert :)', 'Pet Lover <3', 'Roamers :p'],
@@ -68,7 +72,10 @@ const Left = () => {
               Download CV <BsCloudLightningFill />
             </button>
           </a>
-          <button className='w-1/2 border-t-[1px] border-t-zinc-800 text-sm tracking-wide uppercase flex justify-center items-center gap-2 hover:text-designColor duration-300'>
+          <button
+            onClick={() => onContactButtonDidTap()}
+            className='w-1/2 border-t-[1px] border-t-zinc-800 text-sm tracking-wide uppercase flex justify-center items-center gap-2 hover:text-designColor duration-300'
+          >
             Contact me <FiSend />
           </button>
         </div>

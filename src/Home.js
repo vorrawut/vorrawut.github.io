@@ -172,6 +172,7 @@ const Home = () => {
 
           {/*Contact Icon*/}
           <span
+            id='SpanContact'
             onClick={() =>
               setAbout(false) & setEducation(false) & setWorkExperience(false) & setProjects(false) & setBlog(false) & setContact(true)
             }
@@ -213,7 +214,7 @@ const Home = () => {
           </div>
 
           {/* ======================== Smaller device content End ========================== */}
-          <div className='w-full h-[96%] hidden lgl:flex justify-center overflow-y-scroll scrollbar-thin scrollbar-thumb-[#646464]'>
+          <div className='w-full h-[96%] hidden lgl:flex overflow-y-scroll scrollbar-thin scrollbar-thumb-[#646464]'>
             {about && (
               <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
                 <About />

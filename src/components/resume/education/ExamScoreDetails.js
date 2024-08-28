@@ -7,7 +7,7 @@ const ExamScoreDetails = () => {
   return (
     <div className='w-full grid px-6'>
       <div className='col-span-9 md:col-span-4'>
-        <ResumeTitle title='Extra Test Timelines' icon={<PiExam />} />
+        <ResumeTitle title='Testings' icon={<PiExam />} />
         <EducationCard
           badge='June 2024'
           title='IELTS Band Scores: Academic Overall - 6.5'
