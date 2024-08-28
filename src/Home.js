@@ -15,6 +15,8 @@ import Contact from './components/contact/Contact'
 import Work from './components/resume/work/Work'
 import { BiCodeAlt } from 'react-icons/bi'
 import { FaEnvelope, FaUser } from 'react-icons/fa'
+import { MdOutlineClose } from 'react-icons/md'
+import Sidenav from './components/home/sidenav/Sidenav'
 
 const Home = () => {
   // eslint-disable-next-line no-unused-vars
@@ -58,27 +60,27 @@ const Home = () => {
         {/* ======= Home Icon End */}
 
         {/* ============= Sidenav Start here ============= */}
-        {/*{sidenav && (*/}
-        {/*    <div className='w-full h-screen fixed top-0 left-0 bg-black bg-opacity-50 z-50'>*/}
-        {/*        <div className='w-96 h-full relative'>*/}
-        {/*            <motion.div*/}
-        {/*                ref={ref}*/}
-        {/*                initial={{x: -500, opacity: 0}}*/}
-        {/*                animate={{x: 0, opacity: 1}}*/}
-        {/*                transition={{duration: 0.5}}*/}
-        {/*                className='w-full h-full bg-bodyColor overflow-y-scroll scrollbar-thin scrollbar-thumb-[#646464]'*/}
-        {/*            >*/}
-        {/*                <Sidenav/>*/}
-        {/*                <span*/}
-        {/*                    onClick={() => setSidenav(false)}*/}
-        {/*                    className='absolute top-0 -right-16 w-12 h-12 bg-bodyColor text-2xl text-textColor hover:text-designColor duration-300 cursor-pointer flex items-center justify-center z-50'*/}
-        {/*                >*/}
-        {/*  <MdOutlineClose/>*/}
-        {/*</span>*/}
-        {/*            </motion.div>*/}
-        {/*        </div>*/}
-        {/*    </div>*/}
-        {/*)}*/}
+        {sidenav && (
+          <div className='w-full h-screen fixed top-0 left-0 bg-black bg-opacity-50 z-50'>
+            <div className='w-96 h-full relative'>
+              <motion.div
+                ref={ref}
+                initial={{ x: -500, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ duration: 0.5 }}
+                className='w-full h-full bg-bodyColor overflow-y-scroll scrollbar-thin scrollbar-thumb-[#646464]'
+              >
+                <Sidenav />
+                <span
+                  onClick={() => setSidenav(false)}
+                  className='absolute top-0 -right-16 w-12 h-12 bg-bodyColor text-2xl text-textColor hover:text-designColor duration-300 cursor-pointer flex items-center justify-center z-50'
+                >
+                  <MdOutlineClose />
+                </span>
+              </motion.div>
+            </div>
+          </div>
+        )}
 
         {/* ============= Sidenav End here =============== */}
         {/* ======= Other Icons Start */}
