@@ -11,10 +11,10 @@ import { IoIosPaper } from 'react-icons/io'
 import Education from './components/resume/education/Education'
 // import Projects from './components/projects/Projects'
 // import Blog from './components/blog/Blog'
-// import Contact from './components/contact/Contact'
+import Contact from './components/contact/Contact'
 import Work from './components/resume/work/Work'
 import { BiCodeAlt } from 'react-icons/bi'
-import { FaUser } from 'react-icons/fa'
+import { FaEnvelope, FaUser } from 'react-icons/fa'
 
 const Home = () => {
   // eslint-disable-next-line no-unused-vars
@@ -168,22 +168,22 @@ const Home = () => {
           {/*  </span>*/}
           {/*</span>*/}
 
-          {/*/!*Contact Icon*!/*/}
-          {/*<span*/}
-          {/*  onClick={() =>*/}
-          {/*    setAbout(false) & setEducation(false) & setWorkExperience(false) & setProjects(false) & setBlog(false) & setContact(true)*/}
-          {/*  }*/}
-          {/*  className={`${*/}
-          {/*    contact*/}
-          {/*      ? 'text-designColor'*/}
-          {/*      : 'w-full h-6 text-textColor text-xl flex items-center justify-center hover:text-designColor duration-300 cursor-pointer relative group'*/}
-          {/*  } w-full h-6 text-xl flex items-center justify-center hover:text-designColor duration-300 cursor-pointer relative group`}*/}
-          {/*>*/}
-          {/*  <FaEnvelope />*/}
-          {/*  <span className='text-black font-medium text-xs uppercase bg-designColor px-4 py-[1px] rounded-xl absolute left-0 translate-x-8 group-hover:translate-x-12 opacity-0 group-hover:opacity-100 transition-all duration-300 z-20'>*/}
-          {/*    Contact*/}
-          {/*  </span>*/}
-          {/*</span>*/}
+          {/*Contact Icon*/}
+          <span
+            onClick={() =>
+              setAbout(false) & setEducation(false) & setWorkExperience(false) & setProjects(false) & setBlog(false) & setContact(true)
+            }
+            className={`${
+              contact
+                ? 'text-designColor'
+                : 'w-full h-6 text-textColor text-xl flex items-center justify-center hover:text-designColor duration-300 cursor-pointer relative group'
+            } w-full h-6 text-xl flex items-center justify-center hover:text-designColor duration-300 cursor-pointer relative group`}
+          >
+            <FaEnvelope />
+            <span className='text-black font-medium text-xs uppercase bg-designColor px-4 py-[1px] rounded-xl absolute left-0 translate-x-8 group-hover:translate-x-12 opacity-0 group-hover:opacity-100 transition-all duration-300 z-20'>
+              Contact
+            </span>
+          </span>
           {/*<span className='w-full h-6 text-textColor text-xl flex items-center justify-center hover:text-designColor duration-300 cursor-pointer relative group'>*/}
           {/*  <BsTelephonePlusFill />*/}
           {/*  <span className='text-black font-medium text-xs uppercase bg-designColor px-4 py-[1px] rounded-xl absolute left-0 translate-x-8 group-hover:translate-x-12 opacity-0 group-hover:opacity-100 transition-all duration-300 z-20'>*/}
@@ -207,7 +207,7 @@ const Home = () => {
             <Work />
             {/*<Projects />*/}
             {/*<Blog />*/}
-            {/*<Contact />*/}
+            <Contact />
           </div>
 
           {/* ======================== Smaller device content End ========================== */}
@@ -237,11 +237,11 @@ const Home = () => {
             {/*    <Blog />*/}
             {/*  </motion.div>*/}
             {/*)}*/}
-            {/*{contact && (*/}
-            {/*  <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>*/}
-            {/*    <Contact />*/}
-            {/*  </motion.div>*/}
-            {/*)}*/}
+            {contact && (
+              <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
+                <Contact />
+              </motion.div>
+            )}
           </div>
         </div>
       </div>

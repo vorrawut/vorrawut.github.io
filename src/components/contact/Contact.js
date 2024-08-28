@@ -51,7 +51,7 @@ const Contact = () => {
       setErrMessage(true)
     }
     if (clientName && email && EmailValidation(email) && messages) {
-      axios.post('https://getform.io/f/e18ee560-5133-4cfe-9a48-eddb6f012a9f', {
+      axios.post('https://public.herotofu.com/v1/b16751f0-6567-11ef-b675-51969bcd4265', {
         name: clientName,
         email: email,
         message: messages

@@ -14,7 +14,12 @@ const ExamScoreDetails = () => {
           subTitle='IDP IELTS Test Centre Melbourne, Melbourne'
           url='https://ielts.com.au/australia/test-centre/idp-ielts-test-centre-melbourne'
         />
-        <EducationCard badge='2022' title='TOEIC Scores: 670' subTitle='CPA Thailand, Bangkok' url='https://cpathailand.co.th/' />
+        <EducationCard
+          badge='Sep 2022'
+          title='TOEIC Scores: 660'
+          subTitle='TOEIC® Services Thailand, Bangkok'
+          url='https://cpathailand.co.th/'
+        />
       </div>
     </div>
   )
