@@ -11,8 +11,8 @@ const BlogCard = ({ image, title, subTitle, category }) => {
         />
       </div>
       <div className='flex flex-col items-center gap-2'>
-        <span className='text-sm text-designColor border-[1px] border-designColor px-2'>{title}</span>
-        <h2 className='text-base text-center font-semibold font-titleFont text-[#ccc] group-hover:text-designColor duration-300'>
+        <span className='text-sm text-designColorLight border-[1px] border-designColor px-2'>{title}</span>
+        <h2 className='text-base text-center font-semibold font-titleFont text-[#ccc] group-hover:text-designColorLight duration-300'>
           {subTitle}
         </h2>
         <p className='text-sm -mt-1 text-gray-400'>{category}</p>

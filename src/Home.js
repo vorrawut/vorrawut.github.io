@@ -9,14 +9,13 @@ import { IoIosPaper } from 'react-icons/io'
 // import { SiGooglechat } from 'react-icons/si'
 // import { MdWork } from 'react-icons/md'
 import Education from './components/resume/education/Education'
-// import Projects from './components/projects/Projects'
-// import Blog from './components/blog/Blog'
 import Contact from './components/contact/Contact'
 import Work from './components/resume/work/Work'
 import { BiCodeAlt } from 'react-icons/bi'
 import { FaEnvelope, FaUser } from 'react-icons/fa'
 import { MdOutlineClose } from 'react-icons/md'
 import Sidenav from './components/home/sidenav/Sidenav'
+import ThemeSwitch from './common/ThemeContext'
 
 const Home = () => {
   // eslint-disable-next-line no-unused-vars
@@ -46,15 +45,16 @@ const Home = () => {
     <div className='w-full lgl:w-[85%] h-full lgl:h-[85%] bg-transparent text-white z-50 flex items-start justify-between p-4 lgl:p-0'>
       {/* ================= Left Icons End here ======================== */}
       <div className='w-16 h-96 bg-transparent hidden lgl:flex flex-col gap-4'>
+        <ThemeSwitch />
         {/* ======= Home Icon start */}
         <div
           onClick={() => setSidenav(true)}
           className='w-full h-20 bg-bodyColor rounded-3xl flex justify-center items-center cursor-pointer group'
         >
           <div className='flex flex-col gap-1.5 overflow-hidden'>
-            <span className='w-8 h-[2px] bg-textColor inline-block -translate-x-2 group-hover:translate-x-0 transition-transform duration-300 group-hover:bg-designColor'></span>
-            <span className='w-8 h-[2px] bg-textColor inline-block group-hover:bg-designColor duration-300'></span>
-            <span className='w-8 h-[2px] bg-textColor inline-block -translate-x-3.5 group-hover:translate-x-0 transition-transform duration-300 group-hover:bg-designColor'></span>
+            <span className='w-8 h-[2px] bg-textColor inline-block -translate-x-2 group-hover:translate-x-0 transition-transform duration-300 group-hover:bg-designColorLight'></span>
+            <span className='w-8 h-[2px] bg-textColor inline-block group-hover:bg-designColorLight duration-300'></span>
+            <span className='w-8 h-[2px] bg-textColor inline-block -translate-x-3.5 group-hover:translate-x-0 transition-transform duration-300 group-hover:bg-designColorLight'></span>
           </div>
         </div>
         {/* ======= Home Icon End */}
@@ -73,7 +73,7 @@ const Home = () => {
                 <Sidenav />
                 <span
                   onClick={() => setSidenav(false)}
-                  className='absolute top-0 -right-16 w-12 h-12 bg-bodyColor text-2xl text-textColor hover:text-designColor duration-300 cursor-pointer flex items-center justify-center z-50'
+                  className='absolute top-0 -right-16 w-12 h-12 bg-bodyColor text-2xl text-textColor hover:text-designColorLight duration-300 cursor-pointer flex items-center justify-center z-50'
                 >
                   <MdOutlineClose />
                 </span>
@@ -92,13 +92,13 @@ const Home = () => {
             }
             className={`${
               about
-                ? 'text-designColor'
-                : 'w-full h-6 text-textColor text-xl flex items-center justify-center hover:text-designColor duration-300 cursor-pointer relative group'
-            } w-full h-6 text-xl flex items-center justify-center hover:text-designColor duration-300 cursor-pointer relative group`}
-            // className='w-full h-6 text-textColor text-xl flex items-center justify-center hover:text-designColor duration-300 cursor-pointer relative group'
+                ? 'text-designColorLight'
+                : 'w-full h-6 text-textColor text-xl flex items-center justify-center hover:text-designColorLight duration-300 cursor-pointer relative group'
+            } w-full h-6 text-xl flex items-center justify-center hover:text-designColorLight duration-300 cursor-pointer relative group`}
+            // className='w-full h-6 text-textColor text-xl flex items-center justify-center hover:text-designColorLight duration-300 cursor-pointer relative group'
           >
             <FaUser />
-            <span className='text-black font-medium text-xs uppercase bg-designColor px-4 py-[1px] rounded-xl absolute left-0 translate-x-8 group-hover:translate-x-12 opacity-0 group-hover:opacity-100 transition-all duration-300 z-20'>
+            <span className='text-black font-medium text-xs uppercase bg-designColorLight px-4 py-[1px] rounded-xl absolute left-0 translate-x-8 group-hover:translate-x-12 opacity-0 group-hover:opacity-100 transition-all duration-300 z-20'>
               About
             </span>
           </span>
@@ -109,12 +109,12 @@ const Home = () => {
             }
             className={`${
               education
-                ? 'text-designColor'
-                : 'w-full h-6 text-textColor text-xl flex items-center justify-center hover:text-designColor duration-300 cursor-pointer relative group'
-            } w-full h-6 text-xl flex items-center justify-center hover:text-designColor duration-300 cursor-pointer relative group`}
+                ? 'text-designColorLight'
+                : 'w-full h-6 text-textColor text-xl flex items-center justify-center hover:text-designColorLight duration-300 cursor-pointer relative group'
+            } w-full h-6 text-xl flex items-center justify-center hover:text-designColorLight duration-300 cursor-pointer relative group`}
           >
             <IoIosPaper />
-            <span className='text-black font-medium text-xs uppercase bg-designColor px-4 py-[1px] rounded-xl absolute left-0 translate-x-8 group-hover:translate-x-12 opacity-0 group-hover:opacity-100 transition-all duration-300 z-20'>
+            <span className='text-black font-medium text-xs uppercase bg-designColorLight px-4 py-[1px] rounded-xl absolute left-0 translate-x-8 group-hover:translate-x-12 opacity-0 group-hover:opacity-100 transition-all duration-300 z-20'>
               Education
             </span>
           </span>
@@ -126,12 +126,12 @@ const Home = () => {
             }
             className={`${
               workExperience
-                ? 'text-designColor'
-                : 'w-full h-6 text-textColor text-xl flex items-center justify-center hover:text-designColor duration-300 cursor-pointer relative group'
-            } w-full h-6 text-xl flex items-center justify-center hover:text-designColor duration-300 cursor-pointer relative group`}
+                ? 'text-designColorLight'
+                : 'w-full h-6 text-textColor text-xl flex items-center justify-center hover:text-designColorLight duration-300 cursor-pointer relative group'
+            } w-full h-6 text-xl flex items-center justify-center hover:text-designColorLight duration-300 cursor-pointer relative group`}
           >
             <BiCodeAlt />
-            <span className='text-black font-medium text-xs uppercase bg-designColor px-4 py-[1px] rounded-xl absolute left-0 translate-x-8 group-hover:translate-x-12 opacity-0 group-hover:opacity-100 transition-all duration-300 z-20'>
+            <span className='text-black font-medium text-xs uppercase bg-designColorLight px-4 py-[1px] rounded-xl absolute left-0 translate-x-8 group-hover:translate-x-12 opacity-0 group-hover:opacity-100 transition-all duration-300 z-20'>
               Work Experience
             </span>
           </span>
@@ -143,12 +143,12 @@ const Home = () => {
           {/*  }*/}
           {/*  className={`${*/}
           {/*    projects*/}
-          {/*      ? 'text-designColor'*/}
-          {/*      : 'w-full h-6 text-textColor text-xl flex items-center justify-center hover:text-designColor duration-300 cursor-pointer relative group'*/}
-          {/*  } w-full h-6 text-xl flex items-center justify-center hover:text-designColor duration-300 cursor-pointer relative group`}*/}
+          {/*      ? 'text-designColorLight'*/}
+          {/*      : 'w-full h-6 text-textColor text-xl flex items-center justify-center hover:text-designColorLight duration-300 cursor-pointer relative group'*/}
+          {/*  } w-full h-6 text-xl flex items-center justify-center hover:text-designColorLight duration-300 cursor-pointer relative group`}*/}
           {/*>*/}
           {/*  <MdWork />*/}
-          {/*  <span className='text-black font-medium text-xs uppercase bg-designColor px-4 py-[1px] rounded-xl absolute left-0 translate-x-8 group-hover:translate-x-12 opacity-0 group-hover:opacity-100 transition-all duration-300 z-20'>*/}
+          {/*  <span className='text-black font-medium text-xs uppercase bg-designColorLight px-4 py-[1px] rounded-xl absolute left-0 translate-x-8 group-hover:translate-x-12 opacity-0 group-hover:opacity-100 transition-all duration-300 z-20'>*/}
           {/*    Projects*/}
           {/*  </span>*/}
           {/*</span>*/}
@@ -160,12 +160,12 @@ const Home = () => {
           {/*  }*/}
           {/*  className={`${*/}
           {/*    blog*/}
-          {/*      ? 'text-designColor'*/}
-          {/*      : 'w-full h-6 text-textColor text-xl flex items-center justify-center hover:text-designColor duration-300 cursor-pointer relative group'*/}
-          {/*  } w-full h-6 text-xl flex items-center justify-center hover:text-designColor duration-300 cursor-pointer relative group`}*/}
+          {/*      ? 'text-designColorLight'*/}
+          {/*      : 'w-full h-6 text-textColor text-xl flex items-center justify-center hover:text-designColorLight duration-300 cursor-pointer relative group'*/}
+          {/*  } w-full h-6 text-xl flex items-center justify-center hover:text-designColorLight duration-300 cursor-pointer relative group`}*/}
           {/*>*/}
           {/*  <SiGooglechat />*/}
-          {/*  <span className='text-black font-medium text-xs uppercase bg-designColor px-4 py-[1px] rounded-xl absolute left-0 translate-x-8 group-hover:translate-x-12 opacity-0 group-hover:opacity-100 transition-all duration-300 z-20'>*/}
+          {/*  <span className='text-black font-medium text-xs uppercase bg-designColorLight px-4 py-[1px] rounded-xl absolute left-0 translate-x-8 group-hover:translate-x-12 opacity-0 group-hover:opacity-100 transition-all duration-300 z-20'>*/}
           {/*    Blog*/}
           {/*  </span>*/}
           {/*</span>*/}
@@ -178,18 +178,18 @@ const Home = () => {
             }
             className={`${
               contact
-                ? 'text-designColor'
-                : 'w-full h-6 text-textColor text-xl flex items-center justify-center hover:text-designColor duration-300 cursor-pointer relative group'
-            } w-full h-6 text-xl flex items-center justify-center hover:text-designColor duration-300 cursor-pointer relative group`}
+                ? 'text-designColorLight'
+                : 'w-full h-6 text-textColor text-xl flex items-center justify-center hover:text-designColorLight duration-300 cursor-pointer relative group'
+            } w-full h-6 text-xl flex items-center justify-center hover:text-designColorLight duration-300 cursor-pointer relative group`}
           >
             <FaEnvelope />
-            <span className='text-black font-medium text-xs uppercase bg-designColor px-4 py-[1px] rounded-xl absolute left-0 translate-x-8 group-hover:translate-x-12 opacity-0 group-hover:opacity-100 transition-all duration-300 z-20'>
+            <span className='text-black font-medium text-xs uppercase bg-designColorLight px-4 py-[1px] rounded-xl absolute left-0 translate-x-8 group-hover:translate-x-12 opacity-0 group-hover:opacity-100 transition-all duration-300 z-20'>
               Contact
             </span>
           </span>
-          {/*<span className='w-full h-6 text-textColor text-xl flex items-center justify-center hover:text-designColor duration-300 cursor-pointer relative group'>*/}
+          {/*<span className='w-full h-6 text-textColor text-xl flex items-center justify-center hover:text-designColorLight duration-300 cursor-pointer relative group'>*/}
           {/*  <BsTelephonePlusFill />*/}
-          {/*  <span className='text-black font-medium text-xs uppercase bg-designColor px-4 py-[1px] rounded-xl absolute left-0 translate-x-8 group-hover:translate-x-12 opacity-0 group-hover:opacity-100 transition-all duration-300 z-20'>*/}
+          {/*  <span className='text-black font-medium text-xs uppercase bg-designColorLight px-4 py-[1px] rounded-xl absolute left-0 translate-x-8 group-hover:translate-x-12 opacity-0 group-hover:opacity-100 transition-all duration-300 z-20'>*/}
           {/*    Call*/}
           {/*  </span>*/}
           {/*</span>*/}

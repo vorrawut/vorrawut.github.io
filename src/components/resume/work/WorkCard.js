@@ -14,7 +14,7 @@ const WorkCard = ({ badge, title, subTitle, des, url }) => {
 
       {url && (
         <a href={url}>
-          <span className='flex flex-row space-x-1 hover:text-designColor cursor-pointer text-xs text-[#999] pr-10'>
+          <span className='flex flex-row space-x-1 hover:text-designColorLight cursor-pointer text-xs text-[#999] pr-10'>
             <FaLink />
             <p>LINK</p>
           </span>

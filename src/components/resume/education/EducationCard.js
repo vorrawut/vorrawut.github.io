@@ -5,7 +5,7 @@ const EducationCard = ({ badge, title, subTitle, des, url }) => {
   return (
     <div className='w-full py-6 flex flex-col gap-2.5 border-b-[1px] border-b-zinc-800'>
       {badge === '' ? (
-        <h6 className='w-28 text-center text-sm py-[1px] text-designColor border-[1px] border-designColor rounded-sm'>2022-Present</h6>
+        <h6 className='w-28 text-center text-sm py-[1px] text-designColorLight border-[1px] border-designColor rounded-sm'>2022-Present</h6>
       ) : (
         <h6 className='w-24 text-center text-sm py-[1px] text-[#999] border-[1px] border-zinc-600 rounded-sm'>{badge}</h6>
       )}
@@ -17,7 +17,7 @@ const EducationCard = ({ badge, title, subTitle, des, url }) => {
 
       {url && (
         <a href={url}>
-          <span className='flex flex-row space-x-1 hover:text-designColor cursor-pointer text-xs text-[#999] pr-10'>
+          <span className='flex flex-row space-x-1 hover:text-designColorLight cursor-pointer text-xs text-[#999] pr-10'>
             <FaLink />
             <p>LINK</p>
           </span>

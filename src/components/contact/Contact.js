@@ -68,13 +68,13 @@ const Contact = () => {
       <div className='p-6 w-full flex flex-col md:flex-row justify-between gap-4 md:gap-10 lgl:gap-20'>
         <div className='w-full lgl:w-1/2'>
           <p className='flex gap-6 justify-between w-full text-lg text-[#ccc] py-4 border-b-[1px] border-b-zinc-800'>
-            <span className='bg-designColor text-gray-700 text-sm font-titleFont font-medium px-2 rounded-md flex items-center justify-center'>
+            <span className='bg-designColorLight text-gray-700 text-sm font-titleFont font-medium px-2 rounded-md flex items-center justify-center'>
               Address:
             </span>
             Bangkok, Thailand
           </p>
           <p className='flex justify-between w-full text-lg text-[#ccc] py-4 border-b-[1px] border-b-zinc-800'>
-            <span className='bg-designColor text-gray-700 text-sm font-titleFont font-medium px-2 rounded-md flex items-center justify-center'>
+            <span className='bg-designColorLight text-gray-700 text-sm font-titleFont font-medium px-2 rounded-md flex items-center justify-center'>
               Phone:
             </span>
             +66 922683583
@@ -82,13 +82,13 @@ const Contact = () => {
         </div>
         <div className='w-full lgl:w-1/2'>
           <p className='flex justify-between lgl:gap-6 w-full text-lg text-[#ccc] py-4 border-b-[1px] border-b-zinc-800'>
-            <span className='bg-designColor text-gray-700 text-sm font-titleFont font-medium px-2 rounded-md flex items-center justify-center'>
+            <span className='bg-designColorLight text-gray-700 text-sm font-titleFont font-medium px-2 rounded-md flex items-center justify-center'>
               Email:
             </span>
             vorrawutjud.work@gmail.com
           </p>
           <p className='flex justify-between w-full text-lg text-[#ccc] py-4 border-b-[1px] border-b-zinc-800'>
-            <span className='bg-designColor text-gray-700 text-sm font-titleFont font-medium px-2 rounded-md flex items-center justify-center'>
+            <span className='bg-designColorLight text-gray-700 text-sm font-titleFont font-medium px-2 rounded-md flex items-center justify-center'>
               Freelance:
             </span>
             Available
@@ -98,7 +98,7 @@ const Contact = () => {
       <div className='w-full mt-10'>
         <Title title='Send' subTitle='Messages' />
         {successMsg ? (
-          <p className='text-center text-base font-titleFont p-20 text-designColor'>{successMsg}</p>
+          <p className='text-center text-base font-titleFont p-20 text-designColorLight'>{successMsg}</p>
         ) : (
           <form
             id='form'
@@ -138,10 +138,10 @@ const Contact = () => {
             ></textarea>
             <button
               onClick={handleSend}
-              className='text-base w-44 flex items-center gap-1 text-gray-200 hover:text-designColor duration-200'
+              className='text-base w-44 flex items-center gap-1 text-gray-200 hover:text-designColorLight duration-200'
             >
               Send Message{' '}
-              <span className='mt-1 text-designColor'>
+              <span className='mt-1 text-designColorLight'>
                 <FiSend />
               </span>
             </button>
