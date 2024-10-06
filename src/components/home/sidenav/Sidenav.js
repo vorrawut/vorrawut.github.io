@@ -32,6 +32,7 @@ const Sidenav = () => {
         <li className={`sidenavLi ${getNormalLightText}`}>+66 922683583</li>
         <li className={`sidenavLi ${getNormalLightText}`}>vorrawutjud.work@gmail.com</li>
       </ul>
+      {/*<MusicPlayer />*/}
     </div>
   )
 }

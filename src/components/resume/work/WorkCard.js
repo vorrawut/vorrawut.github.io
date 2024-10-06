@@ -49,15 +49,15 @@ const WorkCard = ({
 
       {subTitle && <p className='text-sm text-[#999] -mt-2'>{subTitle}</p>}
 
-      {keyProjectItems && <p className='text-xs text-[#999] font-medium px-5'>Key Projects: {keyProjectItems}</p>}
+      {keyProjectItems && <div className='text-xs text-[#999] font-medium px-5'>Key Projects: {keyProjectItems}</div>}
 
-      {summariesItems && <p className='text-xs text-[#999] font-medium px-5'>Summary: {summariesItems}</p>}
+      {summariesItems && <div className='text-xs text-[#999] font-medium px-5'>Summary: {summariesItems}</div>}
 
       {keyTechnologies && <p className='text-xs text-[#999] font-medium px-5'>Key Technologies: {keyTechnologies}</p>}
 
-      {responsibilitiesItems && <p className='text-xs text-[#999] font-medium px-5'>Responsibilities: {responsibilitiesItems}</p>}
+      {responsibilitiesItems && <div className='text-xs text-[#999] font-medium px-5'>Responsibilities: {responsibilitiesItems}</div>}
 
-      {keyLearningsItems && <p className='text-xs text-[#999] font-medium px-5'>KeyLearning: {keyLearningsItems}</p>}
+      {keyLearningsItems && <div className='text-xs text-[#999] font-medium px-5'>KeyLearning: {keyLearningsItems}</div>}
 
       {achievements && <p className='text-xs text-[#999] font-medium px-5'>Achievements: {achievements}</p>}
 

@@ -1,6 +1,25 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "manifest_version": 3,
+  "short_name": "PortFolio",
+  "name": "Vorrawut PortFolio",
+  "version": "1.0",
+  "description": "A React web portfolio",
+  "permissions": [
+    "tabs",
+    "activeTab"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["/music/**"],
+      "js": ["contentScript.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "index.html"
+  },
   "icons": [
     {
       "src": "favicon.ico",

@@ -7,6 +7,7 @@ import { AiFillTwitterCircle } from 'react-icons/ai'
 import CV from '../../assets/Vorrawut Judasri Resume.pdf'
 import { bannerImage } from '../../assets/index'
 import { useTheme } from '../../ThemeUtils'
+import MusicPlayer from '../musicPlayer/MusicPlayer'
 
 const onContactButtonDidTap = () => {
   document.getElementById('SpanContact').click()
@@ -65,6 +66,9 @@ const Left = () => {
             </a>
           </div>
         </div>
+
+        <MusicPlayer />
+
         <div className='flex h-14'>
           <a
             href={CV}
