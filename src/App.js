@@ -12,10 +12,15 @@ const MEASUREMENT_ID = 'G-RX522EVDM5'
 function App() {
   useEffect(() => {
     // Initialize GA4
-    ReactGA.initialize(MEASUREMENT_ID)
+    try {
+      ReactGA.initialize(MEASUREMENT_ID)
+      console.log('Analytics Success.')
 
-    // Track the first page view
-    ReactGA.send({ hitType: 'pageview', page: '/home', title: 'Landing Page' })
+      // Track the first page view
+      ReactGA.send({ hitType: 'pageview', page: window.location.pathname, title: document.title })
+    } catch (error) {
+      console.log('Analytics Failure.', error)
+    }
   }, [])
 
   return (
