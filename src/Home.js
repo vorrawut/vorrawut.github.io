@@ -17,6 +17,7 @@ import { MdOutlineClose } from 'react-icons/md'
 import Sidenav from './components/home/sidenav/Sidenav'
 import ThemeSwitch from './common/ThemeContext'
 import { useTheme } from './ThemeUtils'
+import ReactGA from 'react-ga4'
 
 const Home = () => {
   // eslint-disable-next-line no-unused-vars
@@ -40,6 +41,11 @@ const Home = () => {
     document.body.addEventListener('click', (e) => {
       if (e.target.contains(ref.current)) {
         setSidenav(false)
+        ReactGA.event({
+          category: 'Button', // Event category
+          action: 'Click_false', // Event action
+          label: 'Sidenav' // Optional label
+        })
       }
     })
   }, [])
@@ -50,7 +56,14 @@ const Home = () => {
         <ThemeSwitch />
         {/* ======= Home Icon start */}
         <div
-          onClick={() => setSidenav(true)}
+          onClick={() => {
+            setSidenav(true)
+            ReactGA.event({
+              category: 'Button', // Event category
+              action: 'Click_true', // Event action
+              label: 'Sidenav' // Optional label
+            })
+          }}
           className={`w-full h-20 ${getBG} rounded-3xl flex justify-center items-center cursor-pointer group`}
         >
           <div className='flex flex-col gap-1.5 overflow-hidden'>
@@ -78,7 +91,14 @@ const Home = () => {
               >
                 <Sidenav />
                 <span
-                  onClick={() => setSidenav(false)}
+                  onClick={() => {
+                    setSidenav(false)
+                    ReactGA.event({
+                      category: 'Button', // Event category
+                      action: 'Click_false', // Event action
+                      label: 'Sidenav' // Optional label
+                    })
+                  }}
                   className={`absolute top-0 -right-16 w-12 h-12 ${getBG} text-2xl ${getNormalLightText} hover:text-designColorLight duration-300 cursor-pointer flex items-center justify-center z-50`}
                 >
                   <MdOutlineClose />
@@ -93,9 +113,19 @@ const Home = () => {
         <div className={`w-full h-80 ${getBG} rounded-3xl flex flex-col items-center justify-between py-6`}>
           {/*About Icon*/}
           <span
-            onClick={() =>
-              setAbout(true) & setEducation(false) & setWorkExperience(false) & setProjects(false) & setBlog(false) & setContact(false)
-            }
+            onClick={() => {
+              setAbout(true)
+              setEducation(false)
+              setWorkExperience(false)
+              setProjects(false)
+              setBlog(false)
+              setContact(false)
+              ReactGA.event({
+                action: 'Click_about', // Event category
+                category: 'Button', // Event action
+                label: 'Menu' // Optional label
+              })
+            }}
             className={`${
               about
                 ? getColorText
@@ -112,9 +142,19 @@ const Home = () => {
 
           {/* Education Icon */}
           <span
-            onClick={() =>
-              setAbout(false) & setEducation(true) & setWorkExperience(false) & setProjects(false) & setBlog(false) & setContact(false)
-            }
+            onClick={() => {
+              setAbout(false)
+              setEducation(true)
+              setWorkExperience(false)
+              setProjects(false)
+              setBlog(false)
+              setContact(false)
+              ReactGA.event({
+                action: 'Click_education', // Event category
+                category: 'Button', // Event action
+                label: 'Menu' // Optional label
+              })
+            }}
             className={`${
               education
                 ? getColorText
@@ -129,9 +169,19 @@ const Home = () => {
 
           {/* Work Icon */}
           <span
-            onClick={() =>
-              setAbout(false) & setEducation(false) & setWorkExperience(true) & setProjects(false) & setBlog(false) & setContact(false)
-            }
+            onClick={() => {
+              setAbout(false)
+              setEducation(false)
+              setWorkExperience(true)
+              setProjects(false)
+              setBlog(false)
+              setContact(false)
+              ReactGA.event({
+                action: 'Click_workExperience', // Event category
+                category: 'Button', // Event action
+                label: 'Menu' // Optional label
+              })
+            }}
             className={`${
               workExperience
                 ? getColorText
@@ -183,9 +233,19 @@ const Home = () => {
           {/*Contact Icon*/}
           <span
             id='SpanContact'
-            onClick={() =>
-              setAbout(false) & setEducation(false) & setWorkExperience(false) & setProjects(false) & setBlog(false) & setContact(true)
-            }
+            onClick={() => {
+              setAbout(false)
+              setEducation(false)
+              setWorkExperience(false)
+              setProjects(false)
+              setBlog(false)
+              setContact(true)
+              ReactGA.event({
+                action: 'Click_contact', // Event category
+                category: 'Button', // Event action
+                label: 'Menu' // Optional label
+              })
+            }}
             className={`${
               contact
                 ? getColorText
