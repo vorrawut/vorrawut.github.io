@@ -16,6 +16,7 @@ import { FaEnvelope, FaUser } from 'react-icons/fa'
 import { MdOutlineClose } from 'react-icons/md'
 import Sidenav from './components/home/sidenav/Sidenav'
 import ThemeSwitch from './common/ThemeContext'
+import { useTheme } from './ThemeUtils'
 
 const Home = () => {
   // eslint-disable-next-line no-unused-vars
@@ -33,6 +34,7 @@ const Home = () => {
   // eslint-disable-next-line no-unused-vars
   const [sidenav, setSidenav] = useState(false)
   const ref = useRef()
+  const { getBG, getColorText, getNormalLightText, getBGHoverText } = useTheme()
 
   useEffect(() => {
     document.body.addEventListener('click', (e) => {
@@ -49,31 +51,35 @@ const Home = () => {
         {/* ======= Home Icon start */}
         <div
           onClick={() => setSidenav(true)}
-          className='w-full h-20 bg-bodyColor rounded-3xl flex justify-center items-center cursor-pointer group'
+          className={`w-full h-20 ${getBG} rounded-3xl flex justify-center items-center cursor-pointer group`}
         >
           <div className='flex flex-col gap-1.5 overflow-hidden'>
-            <span className='w-8 h-[2px] bg-textColor inline-block -translate-x-2 group-hover:translate-x-0 transition-transform duration-300 group-hover:bg-designColorLight'></span>
-            <span className='w-8 h-[2px] bg-textColor inline-block group-hover:bg-designColorLight duration-300'></span>
-            <span className='w-8 h-[2px] bg-textColor inline-block -translate-x-3.5 group-hover:translate-x-0 transition-transform duration-300 group-hover:bg-designColorLight'></span>
+            <span
+              className={`w-8 h-[2px] ${getBGHoverText} inline-block -translate-x-2 group-hover:translate-x-0 transition-transform duration-300`}
+            ></span>
+            <span className={`w-8 h-[2px] ${getBGHoverText} inline-block group-hover:bg-designColorLight duration-300`}></span>
+            <span
+              className={`w-8 h-[2px] ${getBGHoverText} inline-block -translate-x-3.5 group-hover:translate-x-0 transition-transform duration-300`}
+            ></span>
           </div>
         </div>
         {/* ======= Home Icon End */}
 
         {/* ============= Sidenav Start here ============= */}
         {sidenav && (
-          <div className='w-full h-screen fixed top-0 left-0 bg-black bg-opacity-50 z-50'>
+          <div className={`w-full h-screen fixed top-0 left-0 ${getBG} bg-opacity-50 z-50`}>
             <div className='w-96 h-full relative'>
               <motion.div
                 ref={ref}
                 initial={{ x: -500, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ duration: 0.5 }}
-                className='w-full h-full bg-bodyColor overflow-y-scroll scrollbar-thin scrollbar-thumb-[#646464]'
+                className={`w-full h-full ${getBG} overflow-y-scroll scrollbar-thin scrollbar-thumb-[#646464]`}
               >
                 <Sidenav />
                 <span
                   onClick={() => setSidenav(false)}
-                  className='absolute top-0 -right-16 w-12 h-12 bg-bodyColor text-2xl text-textColor hover:text-designColorLight duration-300 cursor-pointer flex items-center justify-center z-50'
+                  className={`absolute top-0 -right-16 w-12 h-12 ${getBG} text-2xl ${getNormalLightText} hover:text-designColorLight duration-300 cursor-pointer flex items-center justify-center z-50`}
                 >
                   <MdOutlineClose />
                 </span>
@@ -84,7 +90,7 @@ const Home = () => {
 
         {/* ============= Sidenav End here =============== */}
         {/* ======= Other Icons Start */}
-        <div className='w-full h-80 bg-bodyColor rounded-3xl flex flex-col items-center justify-between py-6'>
+        <div className={`w-full h-80 ${getBG} rounded-3xl flex flex-col items-center justify-between py-6`}>
           {/*About Icon*/}
           <span
             onClick={() =>
@@ -92,16 +98,18 @@ const Home = () => {
             }
             className={`${
               about
-                ? 'text-designColorLight'
-                : 'w-full h-6 text-textColor text-xl flex items-center justify-center hover:text-designColorLight duration-300 cursor-pointer relative group'
-            } w-full h-6 text-xl flex items-center justify-center hover:text-designColorLight duration-300 cursor-pointer relative group`}
-            // className='w-full h-6 text-textColor text-xl flex items-center justify-center hover:text-designColorLight duration-300 cursor-pointer relative group'
+                ? getColorText
+                : `w-full h-6 ${getNormalLightText} text-xl flex items-center justify-center hover:${getColorText} duration-300 cursor-pointer relative group`
+            } w-full h-6 text-xl flex items-center justify-center hover:${getColorText} duration-300 cursor-pointer relative group`}
           >
-            <FaUser />
-            <span className='text-black font-medium text-xs uppercase bg-designColorLight px-4 py-[1px] rounded-xl absolute left-0 translate-x-8 group-hover:translate-x-12 opacity-0 group-hover:opacity-100 transition-all duration-300 z-20'>
+            <FaUser className={`${about ? getColorText : getNormalLightText}`} />
+            <span
+              className={`${getNormalLightText} font-medium text-xs uppercase ${getBG} px-4 py-[1px] rounded-xl absolute left-0 translate-x-8 group-hover:translate-x-12 opacity-0 group-hover:opacity-100 transition-all duration-300 z-20`}
+            >
               About
             </span>
           </span>
+
           {/* Education Icon */}
           <span
             onClick={() =>
@@ -109,11 +117,11 @@ const Home = () => {
             }
             className={`${
               education
-                ? 'text-designColorLight'
+                ? getColorText
                 : 'w-full h-6 text-textColor text-xl flex items-center justify-center hover:text-designColorLight duration-300 cursor-pointer relative group'
             } w-full h-6 text-xl flex items-center justify-center hover:text-designColorLight duration-300 cursor-pointer relative group`}
           >
-            <IoIosPaper />
+            <IoIosPaper className={`${education ? getColorText : getNormalLightText}`} />
             <span className='text-black font-medium text-xs uppercase bg-designColorLight px-4 py-[1px] rounded-xl absolute left-0 translate-x-8 group-hover:translate-x-12 opacity-0 group-hover:opacity-100 transition-all duration-300 z-20'>
               Education
             </span>
@@ -126,12 +134,14 @@ const Home = () => {
             }
             className={`${
               workExperience
-                ? 'text-designColorLight'
+                ? getColorText
                 : 'w-full h-6 text-textColor text-xl flex items-center justify-center hover:text-designColorLight duration-300 cursor-pointer relative group'
             } w-full h-6 text-xl flex items-center justify-center hover:text-designColorLight duration-300 cursor-pointer relative group`}
           >
-            <BiCodeAlt />
-            <span className='text-black font-medium text-xs uppercase bg-designColorLight px-4 py-[1px] rounded-xl absolute left-0 translate-x-8 group-hover:translate-x-12 opacity-0 group-hover:opacity-100 transition-all duration-300 z-20'>
+            <BiCodeAlt className={`${workExperience ? getColorText : getNormalLightText}`} />
+            <span
+              className={`${getNormalLightText} font-medium text-xs uppercase bg-designColorLight px-4 py-[1px] rounded-xl absolute left-0 translate-x-8 group-hover:translate-x-12 opacity-0 group-hover:opacity-100 transition-all duration-300 z-20`}
+            >
               Work Experience
             </span>
           </span>
@@ -178,11 +188,11 @@ const Home = () => {
             }
             className={`${
               contact
-                ? 'text-designColorLight'
+                ? getColorText
                 : 'w-full h-6 text-textColor text-xl flex items-center justify-center hover:text-designColorLight duration-300 cursor-pointer relative group'
             } w-full h-6 text-xl flex items-center justify-center hover:text-designColorLight duration-300 cursor-pointer relative group`}
           >
-            <FaEnvelope />
+            <FaEnvelope className={`${contact ? getColorText : getNormalLightText}`} />
             <span className='text-black font-medium text-xs uppercase bg-designColorLight px-4 py-[1px] rounded-xl absolute left-0 translate-x-8 group-hover:translate-x-12 opacity-0 group-hover:opacity-100 transition-all duration-300 z-20'>
               Contact
             </span>
@@ -202,7 +212,7 @@ const Home = () => {
         {/* ======================== Home Left Start here ============================ */}
         <Left />
         {/* ======================== Home Left End here ============================== */}
-        <div className='w-full lgl:w-8/12 h-[95%] bg-bodyColor rounded-2xl flex justify-center items-center'>
+        <div className={`w-full lgl:w-8/12 h-[95%] ${getBG} rounded-2xl flex justify-center items-center`}>
           {/* ======================== Smaller device content Start ======================== */}
           <div className='w-full h-full lgl:hidden bg-transparent rounded-2xl flex flex-col gap-6'>
             <About />

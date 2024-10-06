@@ -1,7 +1,9 @@
 import React from 'react'
 import SidenavTitle from './SidenavTitle'
+import { useTheme } from '../../../ThemeUtils'
 
 const Sidenav = () => {
+  const { getNormalLightText } = useTheme()
   return (
     <div className='px-7 py-4'>
       {/*<SidenavTitle title='M' subTitle='enu' />*/}
@@ -27,8 +29,8 @@ const Sidenav = () => {
       {/*</ul>*/}
       <SidenavTitle title='R' subTitle='each Me' />
       <ul>
-        <li className='sidenavLi'>+66 922683583</li>
-        <li className='sidenavLi'>vorrawutjud.work@gmail.com</li>
+        <li className={`sidenavLi ${getNormalLightText}`}>+66 922683583</li>
+        <li className={`sidenavLi ${getNormalLightText}`}>vorrawutjud.work@gmail.com</li>
       </ul>
     </div>
   )

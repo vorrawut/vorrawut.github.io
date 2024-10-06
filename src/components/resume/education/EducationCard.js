@@ -1,7 +1,10 @@
 import React from 'react'
 import { FaLink } from 'react-icons/fa'
+import { useTheme } from '../../../ThemeUtils'
 
 const EducationCard = ({ badge, title, subTitle, des, url }) => {
+  const { getH1ColorText } = useTheme()
+
   return (
     <div className='w-full py-6 flex flex-col gap-2.5 border-b-[1px] border-b-zinc-800'>
       {badge === '' ? (
@@ -9,7 +12,7 @@ const EducationCard = ({ badge, title, subTitle, des, url }) => {
       ) : (
         <h6 className='w-24 text-center text-sm py-[1px] text-[#999] border-[1px] border-zinc-600 rounded-sm'>{badge}</h6>
       )}
-      <h2 className='text-lg font-titleFont text-gray-200 font-medium'>{title}</h2>
+      <h2 className={`text-lg font-titleFont ${getH1ColorText} font-medium`}>{title}</h2>
 
       {subTitle && <p className='text-sm text-[#999] -mt-2'>{subTitle}</p>}
 

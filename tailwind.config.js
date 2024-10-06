@@ -20,6 +20,7 @@ module.exports = {
       colors: {
         bodyColor: '#191919',
         textColor: 'rgba(255, 255, 255, 0.85)',
+        textColorDark: 'rgba(0, 0, 0, 0.85)',
         bgLight: '#ffffff',
         bgDark: '#000000',
         designColorLight: '#205fff',
