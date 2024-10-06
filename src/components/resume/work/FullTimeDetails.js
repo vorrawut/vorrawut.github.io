@@ -15,7 +15,7 @@ const FullTimeDetails = () => {
       summaries={item.summaries}
       keyTechnologies={item.keyTechnologies}
       responsibilities={item.responsibilities}
-      keyLearning={item.keyLearning}
+      keyLearnings={item.keyLearnings}
       achievements={item.achievements}
       url={item.url}
     />

@@ -57,7 +57,7 @@ export const fullTimeData = [
     keyLearnings: [
       {
         id: 0,
-        text: 'Gained insights into micro-services architecture and its application in large-scale financial' + ' systems.'
+        text: 'Gained insights into micro-services architecture and its application in large-scale financial systems.'
       },
       {
         id: 1,
