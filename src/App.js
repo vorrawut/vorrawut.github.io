@@ -5,14 +5,17 @@ import RoundThree from './components/roundDesigns/RoundThree'
 import RoundFour from './components/roundDesigns/RoundFour'
 import RoundFive from './components/roundDesigns/RoundFive'
 import Home from './Home'
-import { initialize, pageview } from 'react-ga'
+import ReactGA from 'react-ga4'
+
+const MEASUREMENT_ID = 'G-RX522EVDM5'
 
 function App() {
-  const TRACKING_ID = 'G-RX522EVDM5' // Replace with your Google Analytics tracking ID
-  initialize(TRACKING_ID)
-
   useEffect(() => {
-    pageview(window.location.pathname + window.location.search)
+    // Initialize GA4
+    ReactGA.initialize(MEASUREMENT_ID)
+
+    // Track the first page view
+    ReactGA.send({ hitType: 'pageview', page: '/home', title: 'Landing Page' })
   }, [])
 
   return (
