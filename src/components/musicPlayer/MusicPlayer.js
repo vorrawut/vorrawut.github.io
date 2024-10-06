@@ -1,8 +1,11 @@
 import React, { useState } from 'react'
 import ReactPlayer from 'react-player'
 import { RxTrackNext, RxTrackPrevious } from 'react-icons/rx'
+import { useTheme } from '../../ThemeUtils'
 
 const MusicPlayer = () => {
+  const { getNormalLightText } = useTheme()
+
   const [playlist] = useState([
     { url: '/music/Colorful-Flowers.mp3', title: 'Colorful Flowers' },
     { url: '/music/Memories-of-Spring.mp3', title: 'Memories of Spring' },
@@ -26,7 +29,7 @@ const MusicPlayer = () => {
     <div className='flex flex-col items-center justify-center mb-4'>
       <div className='flex items-center justify-center space-x-2 mb-2'>
         <RxTrackPrevious onClick={prevSong} />
-        <h4 className='text-white'>Song: {playlist[currentSongIndex].title}</h4>
+        <h4 className={`${getNormalLightText}`}>Song: {playlist[currentSongIndex].title}</h4>
         <RxTrackNext onClick={nextSong} />
       </div>
       <ReactPlayer url={playlist[currentSongIndex].url} playing={isPlaying} controls={true} onEnded={nextSong} width={300} height={30} />
