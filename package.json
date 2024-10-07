@@ -2,7 +2,7 @@
   "name": "vorrawut-portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/vorrawut/vorrawut.github.io",
+  "homepage": "https://vorrawut.github.io/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
