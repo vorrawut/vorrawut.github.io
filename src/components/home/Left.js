@@ -30,7 +30,7 @@ const Left = () => {
         <img className='w-full h-full object-cover rounded-2xl' src={bannerImage} loading='priority' alt='bannerImage' />
       </div>
       <div className='w-full h-2/5 flex flex-col justify-between border-t-0 rounded-bl-xl rounded-br-xl'>
-        <div className='flex flex-col items-center gap-2 py-10'>
+        <div className='flex flex-col items-center gap-2 py-8'>
           <h1 className={`${getBGWithNormalText} text-4xl font-semibold`}>Vorrawut Judasri</h1>
           <p className={`${getBGWithColorText} text-base tracking-wide`}>
             {text}
