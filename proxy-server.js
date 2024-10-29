@@ -1,11 +1,8 @@
-// proxy-server.js
-
 const express = require('express')
 const cors = require('cors')
 const fetch = require('node-fetch')
 
 const app = express()
-const PORT = 5001
 
 app.use(cors())
 
@@ -27,6 +24,4 @@ app.get('/fetch-drive-file', async (req, res) => {
   }
 })
 
-app.listen(PORT, () => {
-  console.log(`Proxy server running on http://localhost:${PORT}`)
-})
+module.exports = app

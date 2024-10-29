@@ -13,7 +13,8 @@
     "lint": "eslint --fix . --ext .js",
     "prettier:write": "prettier --config .prettierrc --write .",
     "prettier:check": "prettier --config .prettierrc --check .",
-    "node": "node proxy-server.js"
+    "node": "node local-server.js",
+    "vercel": "vercel dev"
   },
   "dependencies": {
     "@headlessui/react": "^2.1.3",
