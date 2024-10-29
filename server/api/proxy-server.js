@@ -8,6 +8,7 @@ app.use(cors())
 
 // Define a route to proxy your request
 app.get('/fetch-drive-file', async (req, res) => {
+  console.error('Proxy Server fetch-drive-file with driveFileId: ', req.query.id)
   const driveFileId = req.query.id
   const url = `https://drive.google.com/uc?export=download&id=${driveFileId}`
 
