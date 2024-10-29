@@ -1,6 +1,6 @@
 // local-server.js
 
-const app = require('./src/api/proxy-server') // Import the Express app
+const app = require('./api/proxy-server') // Import the Express app
 
 const PORT = process.env.PORT || 5001
 
