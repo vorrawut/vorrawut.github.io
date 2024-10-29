@@ -6,13 +6,21 @@ import RoundFour from './components/roundDesigns/RoundFour'
 import RoundFive from './components/roundDesigns/RoundFive'
 import Home from './Home'
 import ReactGA from 'react-ga4'
+import useGoogleDriveConfig from './config/LoadJsonFromGoogleDrive'
 
 const MEASUREMENT_ID = 'G-RX522EVDM5'
 
 function App() {
+  const { configData, error } = useGoogleDriveConfig()
+
   useEffect(() => {
     // Initialize GA4
     try {
+      // Check if config was successfully loaded
+      if (configData) {
+        console.log('Loaded Config:', configData)
+      }
+
       ReactGA.initialize(MEASUREMENT_ID)
       console.log('Analytics Success.')
 
@@ -22,6 +30,10 @@ function App() {
       console.log('Analytics Failure.', error)
     }
   }, [])
+
+  if (error) {
+    return <div>Error loading configuration data.</div>
+  }
 
   return (
     <div className='w-full lgl:h-screen font-bodyfont overflow-hidden text-textColor bg-slate-900 relative'>
