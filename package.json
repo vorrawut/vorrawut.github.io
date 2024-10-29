@@ -13,7 +13,7 @@
     "lint": "eslint --fix . --ext .js",
     "prettier:write": "prettier --config .prettierrc --write .",
     "prettier:check": "prettier --config .prettierrc --check .",
-    "node": "node local-server.js",
+    "start:server": "node local-server.js",
     "vercel": "vercel dev"
   },
   "dependencies": {
